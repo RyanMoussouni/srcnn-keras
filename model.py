@@ -1,14 +1,4 @@
-import os
-import numpy as np
-from keras.models import Sequential, model_from_json
-from keras.layers import Input
-from keras.layers.convolutional import Conv2D
-from keras.optimizers import Adam
-
-from keras.layers.core import Activation
-
-
-class SRCNN(keras.Model):
+class SRCNN(tf.keras.Model):
 	def __init__(self):
 		self.input = Input(input_shape=(2160, 3840, 1))
 		self.conv1 = Conv2D(64,9,padding='same')
